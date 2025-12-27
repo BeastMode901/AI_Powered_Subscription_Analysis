@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Defines character encoding to support standard text -->
+    <meta charset="UTF-8">
+
+    <!-- Ensures the page scales correctly on different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title displayed in the browser tab -->
+    <title>Customer Transaction Data Bot</title>
+
+  	</head>
+
+<body>
+
+    <!-- Main page title describing the project -->
+    <h1>AI-Powered Customer Subscription Analysis</h1>
+
+ 
+    <!-- Introductory section explaining the purpose of the AI agent -->
+    <div>
+        <h2>Welcome!</h2>
+        <p>
+            This AI agent allows users to ask questions about customer subscription data and receive data-driven insights on
+            customer activity, plan distribution, category performance, and signup trends. It is designed to support business
+            analysis by transforming structured subscription data into clear, actionable insights.
+        </p>
+    </div>
+
+    <!-- Lists all columns available in the subscription dataset -->
+    <div>
+        <h2>Dataset Columns</h2>
+        <ul>
+            <li><strong>Customer_ID</strong> – Unique identifier for each customer</li>
+            <li><strong>Subscription_Category</strong> – Type of service subscribed to (e.g., Music, Sports, Gaming)</li>
+            <li><strong>Subscription_Plan</strong> – Pricing tier selected (Basic, Standard, Premium)</li>
+            <li><strong>Monthly_Price</strong> – Monthly cost of the subscription</li>
+            <li><strong>Signup_Date</strong> – Date the customer started the subscription</li>
+            <li><strong>Status</strong> – Current subscription status (Active or Churned)</li>
+        </ul>
+    </div>
+
+    <!-- Describes the types of analytical questions the AI will answer -->
+    <div>
+        <h2>AI Bot Capabilities</h2>
+        <p>
+            This AI agent is designed to answer the following business-focused questions based on the subscription dataset:
+        </p>
+        <ul>
+            <li>How many total customers are there?</li>
+            <li>How many customers are currently active?</li>
+            <li>How many customers have churned?</li>
+            <li>How many customers are subscribed to each subscription plan (Basic, Standard, Premium)?</li>
+            <li>Which subscription plan has the highest number of active customers?</li>
+            <li>How many customers are subscribed to each subscription category?</li>
+            <li>Which subscription category has the highest number of churned customers?</li>
+            <li>How does the average monthly subscription price vary by month across all three   	years?</li>
+            <li>Which subscription plan generates the highest estimated monthly revenue?</li>
+            <li>How many customers signed up in each year?</li>
+        </ul>
+    </div>
+
+    <!-- Embeds the Chatbase AI assistant onto the page -->
+    <script>
+      (function(){
+        // Initializes Chatbase if it has not already been loaded
+        if(!window.chatbase || window.chatbase("getState")!=="initialized"){
+          window.chatbase=(...arguments)=>{
+            if(!window.chatbase.q){window.chatbase.q=[]}
+            window.chatbase.q.push(arguments)
+          };
+          window.chatbase=new Proxy(window.chatbase,{
+            get(target,prop){
+              if(prop==="q"){return target.q}
+              return(...args)=>target(prop,...args)
+            }
+          })
+        }
+
+        // Loads the Chatbase embed script once the page is ready
+        const onLoad=function(){
+          const script=document.createElement("script");
+          script.src="https://www.chatbase.co/embed.min.js";
+          script.id="ZkFa2WsLBVijozW55nlZL";
+          script.domain="www.chatbase.co";
+          document.body.appendChild(script)
+        };
+
+        // Ensures the script loads after the page finishes loading
+        if(document.readyState==="complete"){onLoad()}
+        else{window.addEventListener("load",onLoad)}
+      })();
+    </script>
+
+</body>
+</html>
