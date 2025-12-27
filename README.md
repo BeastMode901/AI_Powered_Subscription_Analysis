@@ -1,20 +1,24 @@
 # AI-Powered Customer Subscription Analysis
 
+🔗 **Live Demo:** https://beastmode901.github.io/AI_Powered_Subscription_Analysis/
+
+Users can explore the project by interacting with an AI-powered web interface that answers business questions based on the subscription dataset.
+
+---
+
 ## Project Overview
 This project demonstrates an AI-powered analytics assistant designed to analyze a 5,000-record customer subscription dataset and answer business-focused questions. The AI agent allows users to interact with structured subscription data through an intuitive web interface, transforming analytical questions into clear, data-driven insights that support business analysis and decision-making.
 
 The project combines data analytics fundamentals with an AI agent to make subscription data more accessible and easier to interpret, focusing on customer activity, subscription plans, churn behavior, pricing trends, and signup patterns.
 
-
 ---
 
 ## Tools & Technologies
 - **Excel** – Original Dataset
-- **MySQL** – Database creation and analytical querying.
-- **AI Agent (Chatbase / ChatGPT)** – Interactive question-answering  
+- **MySQL** – Database creation and analytical querying
+- **AI Agent (Chatbase / ChatGPT)** – Interactive question-answering
 - **HTML** – Web-based user interface
 
-  
 ---
 
 ## Dataset Description
@@ -57,5 +61,3 @@ The AI assistant is designed to answer the following business-focused questions 
 - Average monthly subscription prices remain largely stable across months, with the highest values observed in August and September.
 - Revenue analysis shows that the Premium subscription plan generates the highest estimated monthly revenue at $33,443.27.
 - Customer signup trends indicate that new subscriptions were highest in 2022, followed by a gradual decline in 2023 and 2024.
----
-
